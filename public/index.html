@@ -6,10 +6,32 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       * {
         margin: 0px;
         padding: 0;
+        font-family: 'Lato', sans-serif;
+      }
+      @media (min-width: 576px) {
+          .warpper {
+              width: 570px !important;
+              margin: 0 auto;
+          }
+      }
+
+      @media (min-width: 768px) {
+          .warpper {
+              width: 750px !important;
+              margin: 0 auto;
+          }
+      }
+
+      @media (min-width: 992px) {
+          .warpper {
+              width: 940px !important;
+              margin: 0 auto;
+          }
       }
 
     </style>

@@ -1,8 +1,20 @@
 <template>
   <div id="app">
+    <section id="hero">
+      <div id="inHero">
+        <div id="heroUn">
+          <img id="logo" src="@/assets/images/profab-1.png">
+        </div>
+        <div id="heroUn">
+          <h2 style="color : #db1047">contact@profab-fr.fr</h2>
+          <h2 style="color : #777">(+33) 06 07 08 09 10</h2>
+        </div>
+        
+      </div>
+    </section>
     <nav id="navbar">
       <div id="navEntete">
-        <img id="logo" src="@/assets/images/profab-1.png">
+        <!-- img id="logo" src="@/assets/images/profab-1.png"-->
         <img class="navbarMobile" src="@/assets/images/icones/menu3_blanc.png">
       </div>
       <div id="pages">
@@ -18,6 +30,29 @@
 
 <style>
 
+#hero {
+    height: 120px;
+    background-image: url('assets/images/fond_profab.jpg');
+    background-size: cover;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#inHero {
+  font-family: 'Lato', sans-serif;
+  background-color:rgba(255, 255, 255, 0.9);
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
 /******************** NAVBAR ********************/
 
 /**************************************** ORDI ****************************************/
@@ -31,22 +66,22 @@
     }
     
     nav {
-        position: fixed;
+        /*position: fixed;*/
         top: 0px;
-        height: 80px;
+        height: 50px;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between; 
         transition: 0.5s;
         color: black;
+        font-size: 25px;
+        background-color:  white;
+        border-top: 4px solid #db1047;
+        
+        box-shadow: 0 5px rgba(119, 119, 119, 0.322);
     }
     
-    nav {
-        padding: 0 20px;
-        font-size: 25px;
-        
-    }
     
     nav #pages {
         display: flex;

@@ -18,6 +18,11 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: () => import('../views/Contact.vue')
+  },
+  {
+    path: '/pg',
+    name: 'pageGonflables',
+    component: () => import('../views/pageGonflable.vue')
   }
 ]
 
