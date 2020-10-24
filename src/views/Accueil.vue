@@ -2,6 +2,8 @@
     <section>
         
         <NavCategorie />
+
+        <button >TEST</button>
     </section>
     
 </template>
@@ -18,5 +20,8 @@ export default {
 </script>
 
 <style>
-
+ p {
+     font-size: 30px;
+     color: black;
+ }
 </style>

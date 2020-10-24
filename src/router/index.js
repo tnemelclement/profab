@@ -20,8 +20,8 @@ const routes = [
     component: () => import('../views/Contact.vue')
   },
   {
-    path: '/pg',
-    name: 'pageGonflables',
+    path: '/pg/:idJeu',
+    name: 'Jeu',
     component: () => import('../views/pageGonflable.vue')
   }
 ]

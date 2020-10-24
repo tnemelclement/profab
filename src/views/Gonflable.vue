@@ -13,14 +13,19 @@
             <div id="pageJeux">
                 <!-- affiche 12 jeux -->
                 <div v-for="nb in nbJeuxAffiche" :key="nb" id="jeux">
-                    <div v-for="jeu in donnees" :key="jeu.id" >
-                        <VignetteGonf  :_ref="jeu._ref" :prix="jeu.prix" :refer="jeu.ref"/>
-                        {{ counter }}
+                    <div v-for="(jeu, i) in donnees" :key="jeu.id" >
+                        <VignetteGonf v-if=" ((nb-1)*12) <= i && i <= (nb*12-1)" 
+                            :_ref="jeu._ref" 
+                            :prix="jeu.prix" 
+                            :refer="jeu.ref" 
+                            :ident="jeu.id" 
+                            :longeur="jeu.longeur"
+                            :largeur="jeu.largeur" />
                     </div>
                     
-                </div>
+                </div> 
                 <div id="navPageGonf">
-                    <h3>Gonflable affichés : /50</h3>
+                    <h3>Gonflable affichés : {{ donnees.length > (nbJeuxAffiche*12) ? nbJeuxAffiche*12 : donnees.length  }} / {{ donnees.length }}</h3>
                     <a v-on:click="newPageGonf">Afficher plus</a>
                 </div>
             </div>
@@ -46,21 +51,14 @@ export default {
         return {
             donnees : fichier.jeux,
             nbJeuxAffiche : 1,
-            tableauTMP: []
         }
     },
     methods: {
         newPageGonf() {
             this.nbJeuxAffiche += 1
-        },
-        gestion() {
-            for (let index = 0; index < 12; index++) {
-                this.tableauTMP[index].push(this.donnees[index]);
-            }
         }
     }
 }
-
 
 </script>
 

@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <section id="hero">
-      <div id="inHero">
-        <div id="heroUn">
+    
+    <!-- head -->
+    <section id="head">
+      <div id="inhead">
+        <div id="headUn">
           <img id="logo" src="@/assets/images/profab-1.png">
         </div>
-        <div id="heroUn">
+        <div id="headUn">
           <h2 style="color : #db1047">contact@profab-fr.fr</h2>
           <h2 style="color : #777">(+33) 06 07 08 09 10</h2>
         </div>
         
       </div>
     </section>
+   
+   <!-- NAVBAR -->
     <nav id="navbar">
       <div id="navEntete">
         <!-- img id="logo" src="@/assets/images/profab-1.png"-->
@@ -23,14 +27,22 @@
         <router-link to="/contact"><a class="linkNav">Contact</a></router-link>
       </div>
     </nav>
+    
+    <!-- CONTENUE DE LA PAGE -->
     <router-view/>
+
+    <!-- FOOTER -->
+    <footer>
+      <img src="@/assets/images/profab-1.png">
+      <h3>Clément MOULY © Tous droits réservés</h3>
+    </footer>
   </div>
 </template>
 
 
 <style>
 
-#hero {
+#head {
     height: 120px;
     background-image: url('assets/images/fond_profab.jpg');
     background-size: cover;
@@ -41,7 +53,7 @@
     flex-direction: column;
 }
 
-#inHero {
+#inhead {
   font-family: 'Lato', sans-serif;
   background-color:rgba(255, 255, 255, 0.9);
   height: 100%;
@@ -190,23 +202,25 @@
   /******************** FOOTER ********************/
 
 footer {
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 120px;
-    margin-top: 30px;
+  background-color: #777;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 120px;
+  margin-top: 40px;
+}
+
+footer img {
+  height: auto;
+  width: 160px;
+  margin: 0 auto;
 }
 
 footer h3 {
-	color: #FFF;
+	color: #333;
 	text-align: center;
-  font-size: 30px;
-}
-.copyright {
-    padding-top: 15px;
-	text-align: center;
-	color: #777;
+  font-size: 16px;
 }
 
 </style>

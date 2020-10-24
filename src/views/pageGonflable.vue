@@ -3,8 +3,8 @@
      <section id="jeu" class="warpper">
             <div id="titreJeu">
                 <div id="leftTitreJeu">
-                    <h1 id="refJeu">#1005</h1>
-                    <h1 id="nomJeu">Les Mignons</h1>
+                    <h1 id="refJeu">{{ $route.params.refer }}</h1>
+                    <h1 id="nomJeu">{{ $route.params._ref }}</h1>
                 </div>
                 <div v-on:click="likeJ" id="likeJeu">
                     <img v-if="isLiked" src="@/assets/images/icones/coeur-rouge.png">
