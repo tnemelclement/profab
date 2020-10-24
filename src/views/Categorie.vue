@@ -1,9 +1,9 @@
 <template>
        
-     <section id="gonflables" class="warpper">
+     <section id="categorie" class="warpper">
             <div id="titre">
-                <div id="titreGonf"><h1>Gonflables</h1></div>
-                <div id="categorieGonf"> <h1 id="leftCategorieGonf">#1</h1> <h1 id="rightCategorieGonf">Les Petits</h1> </div>
+                <div id="titreCateg"><h1>Catégorie</h1></div>
+                <div id="categorieCateg"> <h1 id="leftCategorieCateg">#1</h1> <h1 id="rightCategorieCateg">Les Petits</h1> </div>
             </div>
             <div id="filtre">
                 <div id="leftFiltre">Flitres</div>
@@ -24,9 +24,9 @@
                     </div>
                     
                 </div> 
-                <div id="navPageGonf">
+                <div id="navPageCateg">
                     <h3>Gonflable affichés : {{ donnees.length > (nbJeuxAffiche*12) ? nbJeuxAffiche*12 : donnees.length  }} / {{ donnees.length }}</h3>
-                    <a v-on:click="newPageGonf">Afficher plus</a>
+                    <a v-on:click="newPageCateg">Afficher plus</a>
                 </div>
             </div>
         
@@ -43,7 +43,7 @@ import VignetteGonf from "@/components/VignetteGonf.vue"
 import fichier from "@/assets/jeux.json"
 
 export default {
-    name: 'Gonflables',
+    name: 'Categorie',
     components: {
         VignetteGonf
     },
@@ -54,7 +54,7 @@ export default {
         }
     },
     methods: {
-        newPageGonf() {
+        newPageCateg() {
             this.nbJeuxAffiche += 1
         }
     }
@@ -82,7 +82,7 @@ export default {
             font-size: 35px;
         } 
 
-        #titreGonf {
+        #titreCateg {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -91,14 +91,14 @@ export default {
             padding: 5px 10px;
         }
 
-        #categorieGonf {
+        #categorieCateg {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
         }
 
-        #leftCategorieGonf {
+        #leftCategorieCateg {
             background-color: #db1047;
             color: white;
             height: 100%;
@@ -106,7 +106,7 @@ export default {
             padding: 5px 10px;
         }
 
-        #rightCategorieGonf {
+        #rightCategorieCateg {
             background-color: white ;
             color: #db1047;
             height: 100%;
@@ -159,20 +159,20 @@ export default {
             flex-wrap: wrap;
         }
 
-        #navPageGonf {
+        #navPageCateg {
             margin-top: 20px;
         }
 
-        #navPageGonf h3 {
+        #navPageCateg h3 {
             margin-bottom: 15px;
         }
 
-        #navPageGonf a {
+        #navPageCateg a {
             border: solid 2px #777;
             padding: 4px 10px 6px 10px;
         }
 
-        #navPageGonf a:hover {
+        #navPageCateg a:hover {
             opacity: 60%;
         }
     }

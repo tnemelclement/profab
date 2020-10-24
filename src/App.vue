@@ -22,9 +22,9 @@
         <img class="navbarMobile" src="@/assets/images/icones/menu3_blanc.png">
       </div>
       <div id="pages">
-        <router-link to="/"><a class="linkNav">Accueil</a></router-link>
-        <router-link to="/gonflable"><a class="linkNav">Gonflables</a></router-link>
-        <router-link to="/contact"><a class="linkNav">Contact</a></router-link>
+        <router-link to="/" class="linkNav">Accueil</router-link>
+        <router-link to="/catalogue" class="linkNav">Catalogue</router-link>
+        <router-link to="/contact" class="linkNav">Contact</router-link>
       </div>
     </nav>
     
@@ -70,12 +70,6 @@
 /**************************************** ORDI ****************************************/
 
   @media (min-width: 992px) {
-    .autre {
-        background-color:rgba(0, 0, 0, 0.9);
-        color: white !important;
-        height: 60px !important;
-        transition: 0.1s;
-    }
     
     nav {
         /*position: fixed;*/
@@ -94,6 +88,17 @@
         box-shadow: 0 5px rgba(119, 119, 119, 0.322);
     }
     
+    nav .linkNav {
+      padding-right: 60px;
+      font-size: 20px;
+      text-decoration: none;
+      outline: none;
+      color: #444;
+    }
+
+    nav .linkNav:hover {
+      color: #db1047;
+    }
     
     nav #pages {
         display: flex;
@@ -102,20 +107,6 @@
         list-style-type: none; 
     }
     
-    nav a {
-        text-decoration: none;
-        outline: none;
-        color: black;
-        background-color: rgba(0, 0, 0, 0.0);
-        font-size: 20px;
-        padding-right: 20px;
-    }
-    
-    nav a:hover {
-        text-decoration: none;
-        outline: none;
-        color: grey;
-    }
 
     #navEntete .navbarMobile {
       display: none; 
@@ -125,10 +116,7 @@
       margin-top: 0px;
     }
 
-    nav #logo {
-      height: 70px;
-    }
-
+    
   }
 
   /**************************************** MOBILE ****************************************/

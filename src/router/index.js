@@ -10,9 +10,14 @@ const routes = [
     component: () => import('../views/Accueil.vue')
   },
   {
-    path: '/gonflable',
-    name: 'Gonflables',
-    component: () => import('../views/Gonflable.vue')
+    path: '/catalogue',
+    name: 'Catalogue',
+    component: () => import('../views/Catalogue.vue')
+  },
+  {
+    path: '/categorie/:idCategorie',
+    name: 'Categorie',
+    component: () => import('../views/Categorie.vue')
   },
   {
     path: '/contact',
