@@ -8,8 +8,8 @@
           <img id="logo" src="@/assets/images/profab-1.png">
         </div>
         <div id="headUn">
-          <h2 style="color : #db1047">contact@profab-fr.fr</h2>
-          <h2 style="color : #777">(+33) 06 07 08 09 10</h2>
+          <h2 style="color : #db1047">contact@profab.fr</h2>
+          <h2 style="color : #777">(+33) 06 38 90 65 24</h2>
         </div>
         
       </div>
@@ -24,6 +24,8 @@
       <div id="pages">
         <router-link to="/" class="linkNav">Accueil</router-link>
         <router-link to="/catalogue" class="linkNav">Catalogue</router-link>
+        <router-link to="/media" class="linkNav">Medias</router-link>
+        <router-link to="/sav" class="linkNav">Service Apres Vente</router-link>
         <router-link to="/contact" class="linkNav">Contact</router-link>
       </div>
     </nav>
@@ -33,7 +35,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <img src="@/assets/images/profab-1.png">
+      <img src="@/assets/images/profab_blanc.png">
       <h3>Clément MOULY © Tous droits réservés</h3>
     </footer>
   </div>
@@ -78,14 +80,10 @@
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between; 
-        transition: 0.5s;
-        color: black;
-        font-size: 25px;
+        justify-content: center; 
         background-color:  white;
         border-top: 4px solid #db1047;
-        
-        box-shadow: 0 5px rgba(119, 119, 119, 0.322);
+        border-bottom: 4px solid #777;
     }
     
     nav .linkNav {
@@ -102,7 +100,8 @@
     
     nav #pages {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-around;
+        align-items: center;
         flex-direction: row;
         list-style-type: none; 
     }
@@ -190,7 +189,7 @@
   /******************** FOOTER ********************/
 
 footer {
-  background-color: #777;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -206,7 +205,7 @@ footer img {
 }
 
 footer h3 {
-	color: #333;
+	color: #777;
 	text-align: center;
   font-size: 16px;
 }

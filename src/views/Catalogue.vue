@@ -14,13 +14,12 @@ export default {
     name: 'Catalogue',
     components: {
         NavCategorie
+    },
+    mounted() {
     }
 }
 </script>
 
 <style>
- p {
-     font-size: 30px;
-     color: black;
- }
+ 
 </style>

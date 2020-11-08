@@ -8,7 +8,7 @@
                 <div class="infoContact">   <img src="../assets/images/icones/phone.png">  <p>06 38 90 65 24</p>    </div>
                 <div class="infoContact">   <img src="../assets/images/icones/mail.png">   <p>jr.mouly@profab.es</p>    </div>
                 <div class="infoContact">   <img src="../assets/images/icones/home.png">   <p>Lacassagne, <br>12450 Calmont</p>    </div>
-                <p id="infoSup">EURL JR MOULY distributeur Profab pays Francophones<br>SIRET : 839 668 357 000 16</p>
+                <p id="infoSup">EURL JR MOULY distributeur Profab pays Francophones<br>&nbsp;<br>SIRET : 839 668 357 000 16</p>
                 
             </div>
         </div>
@@ -25,6 +25,10 @@
                         <label>Prénom :</label>
                         <input type="text">
                     </div>
+                </div>
+                <div class="champ">
+                    <label>Société :</label>
+                    <input type="text">
                 </div>
                 <div class="champ">
                     <label>Téléphone :</label>

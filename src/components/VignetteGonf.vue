@@ -1,6 +1,8 @@
 <template>
     <section id="vignetteGonf">
-         <div v-on:click="$router.push({ name: 'Jeu', params: { idJeu: ident, refer, _ref, prix }})" id="imgVign"></div>
+         <div v-on:click="$router.push({ name: 'Jeu', params: { idJeu: ident, refer, _ref, prix }})" id="imgVign" >
+             <img :src="'http://localhost:8888/img_gonf/'+image">
+         </div>
          <div id="infoVign">
              <div id="leftInfoVign">
                  <h1>#{{ refer }} </h1>
@@ -23,8 +25,12 @@ export default {
         refer: Number,
         _ref : String,
         prix : Number,
-        ident : Number
+        ident : Number,
+        image : String
 
+    },
+    data() {
+       
     }
 }
 </script>
@@ -46,10 +52,14 @@ export default {
 
         #imgVign {
             height: 200px;
-            width: 100%;
-            background-image: url(https://www.profab.es/tienda/4038-large_default/deslizante-de-agua-con-piscina.jpg);
-            background-size: cover;
+            width: 280px;
         }
+
+        #imgVign img {
+            height: 200px;
+            width: 280px;
+        }
+
         #infoVign {
             display: flex;
             justify-content: center;
