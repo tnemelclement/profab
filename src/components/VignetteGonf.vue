@@ -1,7 +1,7 @@
 <template>
     <section id="vignetteGonf">
          <div v-on:click="$router.push({ name: 'Jeu', params: { idJeu: ident, refer, _ref, prix }})" id="imgVign" >
-             <img :src="'http://localhost:8888/img_gonf/'+image">
+             <img :src="'http://amuztoi.com/img_gonf/'+image">
          </div>
          <div id="infoVign">
              <div id="leftInfoVign">
@@ -22,9 +22,9 @@
 export default {
     name: 'VignetteGonf',
     props: {
-        refer: Number,
-        _ref : String,
-        prix : Number,
+        refer: String,
+        _ref : Number,
+        prix : String,
         ident : Number,
         image : String
 

@@ -12,7 +12,19 @@ const routes = [
   {
     path: '/catalogue',
     name: 'Catalogue',
-    component: () => import('../views/Catalogue.vue')
+    component: () => import('../views/Catalogue.vue'),
+    children: [
+      {
+        path: '',
+        name: 'NavCatalogue',
+        component: () => import('../views/NavCatalogue.vue')
+      },
+      {
+        path: ':cat',
+        name: 'Categorie',
+        component: () => import('../views/Categorie.vue')
+      }
+    ]
   },
   {
     path: '/contact',
@@ -28,11 +40,6 @@ const routes = [
     path: '/media',
     name: 'Medias',
     component: () => import('../views/Media.vue')
-  },
-  {
-    path: '/categorie:cat',
-    name: 'Categorie',
-    component: () => import('../views/Categorie.vue')
   },
   
   {

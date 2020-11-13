@@ -22,11 +22,11 @@
         <img class="navbarMobile" src="@/assets/images/icones/menu3_blanc.png">
       </div>
       <div id="pages">
-        <router-link to="/" class="linkNav">Accueil</router-link>
-        <router-link to="/catalogue" class="linkNav">Catalogue</router-link>
-        <router-link to="/media" class="linkNav">Medias</router-link>
-        <router-link to="/sav" class="linkNav">Service Apres Vente</router-link>
-        <router-link to="/contact" class="linkNav">Contact</router-link>
+        <router-link :to="{name: 'Accueil'}" class="linkNav">Accueil</router-link>
+        <router-link :to="{name: 'NavCatalogue'}" class="linkNav">Catalogue</router-link>
+        <router-link :to="{name: 'Media'}" class="linkNav">Medias</router-link>
+        <router-link :to="{name: 'Sav'}" class="linkNav">Service Apres Vente</router-link>
+        <router-link :to="{name: 'Contact'}" class="linkNav">Contact</router-link>
       </div>
     </nav>
     

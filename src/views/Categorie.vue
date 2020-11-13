@@ -1,6 +1,7 @@
 <template>
        
      <section id="categorie" class="warpper">
+         
             <div id="titre">
                 
                 <div id="titreCateg"><h1>Catégorie</h1></div>
@@ -47,6 +48,7 @@
 import VignetteGonf from "@/components/VignetteGonf.vue"
 import fichier from "@/assets/jeux.json"
 import categor from "@/assets/categories.json"
+import axios from 'axios'
 
 export default {
     name: 'Categorie',
@@ -55,9 +57,10 @@ export default {
     },
     data() {
         return {
-            donnees : fichier.jeux,
+            donnees2 : fichier.jeux,
             nbJeuxAffiche : 1,
             charged: false,
+            donnees: null,
             categories: categor.categories,
             categories2: categor,
             textePage: {
@@ -69,11 +72,21 @@ export default {
     methods: {
         newPageCateg() {
             this.nbJeuxAffiche += 1
+        },
+        requete() {
+            axios
+                .get ('http://83.229.85.83:8082/api/v1/gonflables/categorie/'+this.$route.params.cat)
+                .then (reponse => this.donnees = reponse.data.result)
+                .catch (erreur => console.log(erreur + " ERREUR ICIIIIIII"));
         }
     },
     mounted() {
+        console.log(this.$route.params.cat)
+        
+        this.requete()
         this.charged = !this.charged
-
+        
+        
     }
 }
 

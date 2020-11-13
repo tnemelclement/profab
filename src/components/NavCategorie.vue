@@ -1,5 +1,6 @@
 <template>
     <section id="categorie" class="warpper">
+        
         <div id="sousCat">
             <img v-on:click="openSousCat" src="../assets/images/icones/croix.png">
             <div v-for="sousCat in sousCategorie" :key="sousCat.id">
@@ -194,7 +195,9 @@ export default {
     methods: {
         openCat: function (id) {
             if (id !=3 ) {
-                this.$router.push({ name: 'Categorie', params: { cat: id}})
+                //let cat = id
+                this.$router.push({ name: 'Categorie', params: { cat: id }})
+                //this.$router.push(`/catalogue/categorie/${cat}`)
             } else {
                 this.openSousCat()
             }
@@ -209,6 +212,9 @@ export default {
         }
     },
     mounted() {
+        $('#sousCat').slideUp(1);  
+    },
+    updated() {
         $('#sousCat').slideUp(1);  
     }
 }
