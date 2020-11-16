@@ -1,0 +1,121 @@
+{
+    "accueil" : [
+        {
+            "id" : "qsn",
+            "titre" : "Qui sommes nous ?",
+            "paragraphe" : [
+                "Profab SL est une entreprise familiale créée en 1991 dans le village de Cabanes en Espagne (Castellon). Nous sommes un fabricant de structures gonflables mondialement reconnu dans l’industrie du loisir.  Nous mettons tout en œuvre pour offrir à nos clients un produit et un service exceptionnel, ce qui nous permet de réaliser un chiffre d'affaire annuel de 3 million d'euros.",
+                "Nos techniques de production avancées et l’expérience des 38 collaborateurs font de Profab une marque leader et expérimentée connue pour ses gonflables de haute qualité et de grande durabilité.",
+                "Nos clients en Europe, en Angleterre, en Russie, en Afrique et au Moyen-Orient, nous permettent de faire le bonheur de milliers d’enfants et d’adultes depuis plus de 30 ans.",
+                "Chaque gonflable qui sort de nos ateliers est unique et a une durée de vie importante. Certains de nos gonflables fabriqués il y a plus de 20 ans, sont toujours en activité !"
+            ],
+            "img" : [
+                "http://www.amuztoi.com/wp-content/uploads/2019/11/archery_tag_16.jpg",
+                "http://www.amuztoi.com/wp-content/uploads/2019/11/minions_0.jpg",
+                "http://www.amuztoi.com/wp-content/uploads/2019/11/ventre_glisse_2.jpg"
+            ],
+            "type": 1,
+            "bgcolor": "white",
+            "color": "black"
+        },
+        {
+            "id" : "fab",
+            "titre" : "Fabrication",
+            "paragraphe" : [
+               "Nous fabriquons des gonflables depuis plus de 30 ans. La plupart de nos produits sont peints à la main avec des formes et des dessins très détaillés ce qui nous permet de proposer des gonflables uniques. Les thèmes ne manquent pas (Pirate, Marin, Médieval, Safari…) ce qui permet à nos designer et à nos peintres d’être imaginatifs et créatifs afin de « sortir » des produits exceptionnels.",
+               "Nous proposons un large choix parmis les références de notre catalogue. Nous pouvons aussi réaliser des gonflables sur mesure, que ce soit pour la création d’un nouveau jeu ou pour les besoins en communication d’une entreprise. Bien évidemment, tout cela dans le respect de votre cahier des charges et de la charte graphique qui nous est confiée.",
+               "Pour tout projet de création, nous réalisons une étude technique, dans le respect des normes et nous vous remettons une simulation en  3D."
+            ],
+            "img" : [
+                "http://www.amuztoi.com/wp-content/uploads/2019/11/archery_tag_16.jpg",
+                "http://www.amuztoi.com/wp-content/uploads/2019/11/minions_0.jpg",
+                "http://www.amuztoi.com/wp-content/uploads/2019/11/ventre_glisse_2.jpg"
+            ],
+            "type": 2,
+            "bgcolor": "#444",
+            "color": "white"
+        },
+        {
+            "id" : "cert",
+            "titre" : "Certificat de conformité",
+            "paragraphe" : [
+                "La conception des structures gonflables est régie par la norme EN-14960 et EN-1176, afin que les utilisateurs puissent s’amuser en toute sécurité.",
+                "Tous les gonflables que nous fabriquons sont conformes à ces normes. Chaque gonflable fabriqué est contrôlé par un membre accrédité au registre international des inspecteurs de jeu (RPII Register of Play Inspector International). Nous avons plusieurs inspecteurs dans l’entreprise, formés et en lien permanent avec le RPII (l'organisation qui a élaboré ces règlements).",
+                "Par conséquent, tous nos gonflables quittent nos installations avec un dossier de conformité complet. De plus, nous apposons la certification Pipa (avec un numéro de série propre à chaque  gonflable) qui est un moyen simple et efficace de savoir si un gonflable est conforme à la norme. Ce numéro de série  est enregistré dans la base de données de l’organisme www.pipa.org.uk",
+                "En Europe, de nombreux  gonflables en circulation ne respectent pas ces normes. En effet ce sont souvent des produits Asiatiques ou fabriqués avant cette réglementation. En tant que fabriquant, nous offrons la possibilité d'inspecter ces structures gonflables et de fournir un certificat si elles sont conformes à la réglementation.",
+                "Les autorités et les compagnies d'assurance exigent de plus en plus souvent cette documentation pour pouvoir utiliser la structure gonflable. Il est donc un critère primordial pour vos futurs investissements."
+            ],
+            "img" : [
+                "http://www.amuztoi.com/wp-content/uploads/2019/11/archery_tag_16.jpg",
+                "http://www.amuztoi.com/wp-content/uploads/2019/11/minions_0.jpg",
+                "http://www.amuztoi.com/wp-content/uploads/2019/11/minions_0.jpg",
+                "http://www.amuztoi.com/wp-content/uploads/2019/11/ventre_glisse_2.jpg"
+            ],
+            "type": 3,
+            "bgcolor": "white",
+            "color": "black"
+        },
+        {
+            "id" : "fr",
+            "titre" : "En France",
+            "paragraphe" : [
+                "Dans le cadre du développement commercial dans les pays francophones, nous avons confié la distribution des gonflables Profab à la société française EURL Jr Mouly-Lacassagne-12450 CALMONT.",
+                "L’expérience dans l’utilisation de nos produits fait de ce collaborateur un partenaire sérieux pour conseiller au mieux les clients. De plus cela permet à nos clients d’avoir un interlocuteur Français et de proposer un service après-vente au plus proche d’eux (nettoyage, séchage, réparation, hivernage …)."
+            ],
+            "img" : [
+
+            ],
+            "type": 3,
+            "bgcolor": "#444",
+            "color": "white"
+        }
+    ],
+    "sav" : [
+        {
+            "id" : "qsn",
+            "titre" : "Contrôle et certifications des structures gonflables",
+            "paragraphe" : [
+                "Pour garantir la sécurité des utilisateurs et la longévité de vos structures gonflables, nous vous conseillons de nous confier vos jeux une fois par an.",
+                "En effet, nous pouvons assurer le contrôle annuel de votre structure gonflable. Ce contrôle est recommandé par la norme européenne EN 14960-2016 et nous permet d’effectuer l’entretien préventif (petites réparations) des gonflables.",
+                "Lorsque la structure a été contrôlée, si celle-ci ne répond pas aux exigences de la norme européenne, nous pouvons vous proposer un service de mise en conformité."
+
+            ],
+            "img" : [
+                
+            ],
+            "type": 3,
+            "bgcolor": "white",
+            "color": "black"
+        },
+        {
+            "id" : "fab",
+            "titre" : "Réparation",
+            "paragraphe" : [
+               "Profab propose un service de réparation ouvert toute l’année. Nos techniciens peuvent effectuer les réparations sur toutes les marques de gonflables. La seule condition est que celle-ci soit de bonne qualité (attention donc aux produits en provenance d’Asie).",
+               "Pour toutes les réparations nous utilisons des matériaux de haute qualité et nous disposons d’une palette de couleurs permettant de se rapprocher au mieux de l’original. Nous utilisons du fil spécifique très résistant pour des réparations en quadruple couture.",
+               "Les réparations peuvent s’effectuer dans nos locaux, mais nous pouvons aussi intervenir sur place pour les réparations d’urgence de vos structures gonflables. "
+            ],
+            "img" : [
+                
+            ],
+            "type": 3,
+            "bgcolor": "#444",
+            "color": "white"
+        },
+        {
+            "id" : "cert",
+            "titre" : "Nettoyage / Séchage / Hivernage",
+            "paragraphe" : [
+               "Nous vous proposons un service de nettoyage de structures gonflables. Chaque année en fin de saison, vous pouvez nous confier vos gonflables afin de procéder à un nettoyage complet. Nous utilisons des produits de qualité afin de ne pas endommager votre jeu et ainsi prolonger la durée de vie de la structure gonflable.",
+               "Enfin nous procédons au séchage complet (intérieur et extérieur) de la structure gonflable puis au pliage afin qu’il soit prêt pour la future saison.",
+               "Nous pouvons aussi assurer l’hivernage de vos gonflables dans les meilleures conditions."
+            ],
+            "img" : [
+                
+            ],
+            "type": 3,
+            "bgcolor": "white",
+            "color": "black"
+        }
+    ]
+}

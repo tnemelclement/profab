@@ -18,40 +18,60 @@
 
                 <div id="nomPrenom">
                     <div class="champ nomPrenom">
-                        <label>Nom :</label>
-                        <input type="text">
+                        <label for="name">Nom :</label>
+                        <input id="name" v-model="name" type="text" name="name">
                     </div>
                     <div class="champ nomPrenom">
-                        <label>Prénom :</label>
-                        <input type="text">
+                        <label for="name">Prénom :</label>
+                        <input id="firstname" v-model="firstname" type="text" firstname="firstname">
                     </div>
                 </div>
                 <div class="champ">
-                    <label>Société :</label>
-                    <input type="text">
+                    <label for="name">Société :</label>
+                    <input id="society" v-model="society" type="text" society="society">
                 </div>
                 <div class="champ">
-                    <label>Téléphone :</label>
-                    <input type="text">
+                    <label for="phone">Téléphone :</label>
+                        <input id="phone" v-model="phone" type="text" phone="phone">
                 </div>
                 <div class="champ">
-                    <label>E-mail :</label>
-                    <input type="text">
+                    <label for="email">Nom :</label>
+                    <input id="email" v-model="email" type="text" email="email">
                 </div>
                 <div class="champ">
-                    <label>Message :</label>
-                    <textarea></textarea>
+                    <label for="message">Nom :</label>
+                    <textarea id="message" v-model="message" type="text" message="message"></textarea>
                 </div>
                 <div>
-                    <button>Envoyer</button>
+                    <button type="submit" value="Submit">Envoyer</button>
                 </div>
-
+            
             </form>
-
+            {{name}}, {{firstname}}, {{society}}, {{email}}, {{phone}}, {{message}}
 
         </div>
     </section>
 </template>
+
+<script>
+
+// import axios from 'axios'
+
+export default {
+    methods: {
+        data() {
+            return {
+                name: "se",
+                firstname: "",
+                society: "",
+                email: "",
+                phone: "",
+                message: ""
+            }
+        }
+    }
+}
+</script>
 
 <style>
 

@@ -33,7 +33,7 @@ const routes = [
   },
   {
     path: '/sav',
-    name: 'Service Apres Vente',
+    name: 'Sav',
     component: () => import('../views/Sav.vue')
   },
   {
@@ -41,12 +41,22 @@ const routes = [
     name: 'Medias',
     component: () => import('../views/Media.vue')
   },
-  
   {
-    path: '/pg/:idJeu',
-    name: 'Jeu',
+    path: '/enstock',
+    name: 'En Stock',
+    component: () => import('../views/EnStock.vue')
+  },
+  {
+    path: '/gonflable/:id',
+    name: 'PageGonflable',
     component: () => import('../views/pageGonflable.vue')
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: () => import('../views/Admin.vue')
   }
+
 ]
 
 const router = new VueRouter({

@@ -1,7 +1,7 @@
 <template>
     <section id="vignetteGonf">
-         <div v-on:click="$router.push({ name: 'Jeu', params: { idJeu: ident, refer, _ref, prix }})" id="imgVign" >
-             <img :src="'http://amuztoi.com/img_gonf/'+image">
+         <div v-on:click="$router.push({ name: 'PageGonflable', params: { id: refer}})" id="imgVign" >
+             <img :src="'http://amuztoi.com/img_gonf/photo_stock/'+image">
          </div>
          <div id="infoVign">
              <div id="leftInfoVign">
@@ -11,7 +11,7 @@
                  <h1>{{ _ref }}</h1>
              </div>
          </div>
-         <div id="prixVign">À partir de {{ prix }} €</div>
+         <p id="prixVign">Prix HT : {{ prix }} €</p>
 
     </section>
 </template>
@@ -19,18 +19,17 @@
 
 
 <script>
+
+
 export default {
     name: 'VignetteGonf',
     props: {
-        refer: String,
-        _ref : Number,
-        prix : String,
-        ident : Number,
-        image : String
+        refer: null,
+        _ref : null,
+        prix : null,
+        ident : null,
+        image : null
 
-    },
-    data() {
-       
     }
 }
 </script>
@@ -52,12 +51,16 @@ export default {
 
         #imgVign {
             height: 200px;
-            width: 280px;
+            width: 274px;
+            border-top: solid;
+            border-right: solid;
+            border-left: solid;
         }
 
         #imgVign img {
             height: 200px;
-            width: 280px;
+            width: 274px;
+            
         }
 
         #infoVign {
@@ -80,8 +83,9 @@ export default {
             width: 30%;
         }
         #rightInfoVign {
+            padding: 0px 10px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
 
             background-color: white ;
@@ -89,11 +93,15 @@ export default {
             height: 100%;
             border: solid #db1047;
             width: 70%;
+            white-space: nowrap;
+            text-overflow: none;
+            overflow: hidden;
         }
         #prixVign {
             display: flex;
             justify-content: center;
             align-items: center;
+            
 
             height: 30px;
             border: solid black;

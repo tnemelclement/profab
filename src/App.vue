@@ -5,7 +5,7 @@
     <section id="head">
       <div id="inhead">
         <div id="headUn">
-          <img id="logo" src="@/assets/images/profab-1.png">
+          <img @click="$router.push({name: 'Accueil'})" id="logo" src="@/assets/images/profab-1.png">
         </div>
         <div id="headUn">
           <h2 style="color : #db1047">contact@profab.fr</h2>
@@ -24,7 +24,8 @@
       <div id="pages">
         <router-link :to="{name: 'Accueil'}" class="linkNav">Accueil</router-link>
         <router-link :to="{name: 'NavCatalogue'}" class="linkNav">Catalogue</router-link>
-        <router-link :to="{name: 'Media'}" class="linkNav">Medias</router-link>
+        <router-link :to="{name: 'En Stock'}" class="linkNav">Jeux en Stock</router-link>
+        <router-link :to="{name: 'Medias'}" class="linkNav">Medias</router-link>
         <router-link :to="{name: 'Sav'}" class="linkNav">Service Apres Vente</router-link>
         <router-link :to="{name: 'Contact'}" class="linkNav">Contact</router-link>
       </div>
@@ -36,7 +37,7 @@
     <!-- FOOTER -->
     <footer>
       <img src="@/assets/images/profab_blanc.png">
-      <h3>Clément MOULY © Tous droits réservés</h3>
+      <h3>Profab France © Tous droits réservés</h3>
     </footer>
   </div>
 </template>
@@ -65,6 +66,10 @@
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
+}
+
+#headUn img {
+  cursor: pointer;
 }
 
 /******************** NAVBAR ********************/

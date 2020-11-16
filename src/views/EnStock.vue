@@ -4,15 +4,21 @@
          
             <div id="titre">
                 
-                <div id="titreCateg"><h1>Catégorie</h1></div>
-                <div id="categorieCateg"> <h1 id="leftCategorieCateg">#{{$route.params.cat}}</h1> <h1 id="rightCategorieCateg">{{categories2[$route.params.cat > 10 ? "sousCategories" : "categories"][$route.params.cat > 10 ? (($route.params.cat)%10)-1 : ($route.params.cat)-1]["name"]}}</h1> </div>
+                <div id="titreCateg"><h1>Catalogue</h1></div>
+                <div id="categorieCateg"> <h1 id="leftCategorieCateg">#00</h1> <h1 id="rightCategorieCateg">Jeux en Stock</h1> </div>
             </div>
             <div style="padding-bottom: 20px; font-size: 16px">
-                <p>{{categories2[$route.params.cat > 10 ? "sousCategories" : "categories"][$route.params.cat > 10 ? (($route.params.cat)%10)-1 : ($route.params.cat)-1]["description"]}}</p>
+                <p></p>
             </div>
             <div id="filtre">
                 <div id="leftFiltre">Flitres</div>
-                <div id="rightFiltre"> Test test test test</div>
+                <div id="rightFiltre">
+                <div @click="requete(1)">Prix croissant</div>
+                <div id="rightFiltreElt"> | </div>
+                <div @click="requete(2)">Prix décroissant</div>
+                <div id="rightFiltreElt"> | </div>
+                <div @click="requete(0)" >Par ID</div>
+                </div>
             </div>
 
             <div v-if="!charged" style="text-align: center; padding: 250px; font-size: 30px">Loading...</div>
@@ -22,9 +28,9 @@
                 <div v-for="nb in nbJeuxAffiche" :key="nb" id="jeux">
                     <div v-for="(jeu, i) in donnees" :key="jeu.id" >
                         <VignetteGonf v-if=" ((nb-1)*12) <= i && i <= (nb*12-1)" 
-                            :_ref="jeu._ref" 
-                            :prix="jeu.prix" 
-                            :refer="jeu.ref" 
+                            :_ref="jeu.nom" 
+                            :prix="jeu.prix_ht" 
+                            :refer="jeu.id" 
                             :image="jeu.img1"
                             />
                     </div>
@@ -48,10 +54,11 @@
 import VignetteGonf from "@/components/VignetteGonf.vue"
 import fichier from "@/assets/jeux.json"
 import categor from "@/assets/categories.json"
+//import $ from 'jquery'
 import axios from 'axios'
 
 export default {
-    name: 'Categorie',
+    name: 'EnStock',
     components: {
         VignetteGonf
     },
@@ -61,7 +68,7 @@ export default {
             nbJeuxAffiche : 1,
             charged: false,
             donnees: null,
-            longeurDonnee: 0,
+            longeurDonnee : 0,
             categories: categor.categories,
             categories2: categor,
             textePage: {
@@ -74,18 +81,31 @@ export default {
         newPageCateg() {
             this.nbJeuxAffiche += 1
         },
-        requete() {
+        calculLengthDonnee() {
+            let cpt = 0;
+            this.donnees.forEach(elt => {
+                console.log(elt.id)
+                cpt++
+            });
+            this.longeurDonnee = cpt
+        },
+        requete(tri) {
             axios
-                .get ('http://83.229.85.83:8082/api/v1/gonflables/categorie/'+this.$route.params.cat)
+                .get ('http://83.229.85.83:8082/api/v1/gonflables/enstockTri'+tri)
                 .then (reponse => this.donnees = reponse.data.result)
+                //.then (reponse => console.log(reponse.data.result))
                 .catch (erreur => console.log(erreur + " ERREUR ICIIIIIII"));
         }
     },
     mounted() {
-        console.log(this.$route.params.cat)
+        //console.log(this.$route.params.cat)
         
-        this.requete()
-        this.charged = !this.charged
+        this.requete(0)
+
+
+       
+       this.charged = !this.charged;
+       
         
         
     }
@@ -176,7 +196,14 @@ export default {
             justify-content: flex-end;
             align-items: center;
             flex-direction: row;
+            cursor: pointer;
         }
+
+        #rightFiltreElt {
+            padding: 0 20px;
+        }
+
+
         #pageJeux {
             margin: 20px;
             text-align: center;

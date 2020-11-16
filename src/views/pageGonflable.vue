@@ -3,26 +3,30 @@
      <section id="jeu" class="warpper">
             <div id="titreJeu">
                 <div id="leftTitreJeu">
-                    <h1 id="refJeu">{{ $route.params.refer }}</h1>
-                    <h1 id="nomJeu">{{ $route.params._ref }}</h1>
+                    <h1 id="refJeu">{{ donnee.id }}</h1>
+                    <h1 id="nomJeu">{{ donnee.nom }}</h1>
                 </div>
-                <div v-on:click="likeJ" id="likeJeu">
+                <div v-on:click="likeJ" id="likeJeu" v-if="false">
                     <img v-if="isLiked" src="@/assets/images/icones/coeur-rouge.png">
                     <img v-else src="@/assets/images/icones/coeur-noir.png">
                 </div>
             </div>
             
             <div id="blocJeu">
-                <div id="photoJeu"></div>
+                <div id="photoJeu">
+                    <img :src="'http://amuztoi.com/img_gonf/photo_stock/'+donnee.img1">
+                </div>
                 <div id="infoJeu">
-                    <div id="navJeu">
-                        <h2 id="leftNavJeu">Décoration : </h2>
-                        <div v-for="n in ['L','XL','M']" :key="n">
-                            <h2 id="rightNavJeu">{{n}}</h2>
+                    <div id="navJeu" >
+                        <h2 id="leftNavJeu">Prix (Hors Taxes) : </h2>
+                        <div>
+                            <h2 id="rightNavJeu">{{donnee.prix_ht}} €</h2>
                         </div>
                     </div>
                     <div id="descriptionJeu">
-                        <p>Dim : {{longeur}} x {{largeur}} m.</p>
+                        <p>Longeur : {{donnee.longeur}} m.</p>
+                        <p>Largeur : {{donnee.largeur}} m.</p>
+                        <p v-if=" donnee.hauteur != null">Hauteur : {{donnee.hauteur}} m.</p>
                     </div>
                 </div>
             </div>
@@ -34,6 +38,49 @@
         
         </section>
 </template>
+
+
+
+<script>
+import axios from 'axios'
+
+export default {
+    name: 'pageGonflables',
+    data () {
+        return {
+            isLiked : false,
+            longeur: 5,
+            largeur: 6,
+            donnee: null
+        }
+    },
+    methods: {
+        likeJ() {
+            this.isLiked = !this.isLiked
+            if (this.isLiked) {
+                document.getElementById("likeJeu").classList.add("isLikedclass");
+            } else {
+                document.getElementById("likeJeu").classList.remove("isLikedclass");
+            }
+        },
+        requete() {
+            axios
+                .get ('http://83.229.85.83:8082/api/v1/gonflables/'+this.$route.params.id)
+                .then (reponse => this.donnee = reponse.data.result)
+                .then(console.log(this.donnee))
+                .catch (erreur => console.log(erreur + " ERREUR ICIIIIIII"));
+            
+        }
+    },
+     mounted() {
+        this.requete()
+        this.charged = !this.charged
+
+    }
+}
+</script>
+
+
 
 <style>
     @media (min-width: 992px) {
@@ -133,7 +180,7 @@
             align-items: center;
             flex-direction: row;
             height: 40px;
-            width: 70px;
+            padding: 0 10px;
             background-color: aliceblue;
         }
 
@@ -154,8 +201,15 @@
 
         #photoJeu {
             width: 50%;
-            background-image: url(https://www.amuztoi.com/rodez/wp-content/uploads/2019/11/minion_10.jpg);
-            background-size: cover ;
+            border: solid #000;
+            height: 394px;
+            
+        }
+
+        #photoJeu img {
+            width: 100%;
+            height: 100%;
+            
         }
         #infoJeu {
             width: 50%;
@@ -165,10 +219,15 @@
         }
 
         #descriptionJeu {
-            padding: 10px;
+            padding: 10px 20px;
         }
 
         #avisJeu {}
+
+        #descriptionJeu p {
+            font-size: 20px;
+            padding: 10px 0;
+        }
     }
 
     /* Mobile / Small tablet 576px */
@@ -177,25 +236,3 @@
     }
 </style>
 
-<script>
-export default {
-    name: 'pageGonflables',
-    data () {
-        return {
-            isLiked : false,
-            longeur: 5,
-            largeur: 6
-        }
-    },
-    methods: {
-        likeJ() {
-            this.isLiked = !this.isLiked
-            if (this.isLiked) {
-                document.getElementById("likeJeu").classList.add("isLikedclass");
-            } else {
-                document.getElementById("likeJeu").classList.remove("isLikedclass");
-            }
-        }
-    }
-}
-</script>

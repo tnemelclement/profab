@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d214446"],{afe0:function(n,e,t){"use strict";t.r(e);var o=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("section",[t("router-view")],1)},u=[],c={name:"Catalogue",components:{},mounted:function(){}},a=c,l=t("2877"),r=Object(l["a"])(a,o,u,!1,null,null,null);e["default"]=r.exports}}]);
-//# sourceMappingURL=chunk-2d214446.b35cfac4.js.map
